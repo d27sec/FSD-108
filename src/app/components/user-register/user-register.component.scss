@@ -1,0 +1,27 @@
+h3{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: rgb(26, 57, 102);
+}
+
+label{
+    text-align: center;
+    color: #4c4d55;
+    font-weight: 600;
+}
+
+form{
+    padding: 20px;
+    border: 1px solid #5e717e;
+    border-radius: 8px;
+    background-color: #1b262c;
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+
+}
+
+input{
+    width: 20rem;
+}

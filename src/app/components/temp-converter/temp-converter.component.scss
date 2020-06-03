@@ -1,0 +1,50 @@
+h3{
+    text-align: center;
+}
+
+input{
+    background-color: inherit;
+    color: rgba(255, 255, 255, 0.452);
+    border: none;
+    min-height: 5rem;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.convertor {
+    width: 50%;
+    background-color: rgba(71, 71, 99, 0.521);
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 15rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px 10px;
+  grid-template-areas: "convertor convertor convertor convertor" "block block block2 block2" ". . . ." ". . . .";
+}
+.convertor ::shadow{
+    background-color: green($color: #000000);
+}
+
+.heading { 
+    grid-area: convertor; 
+}
+
+.block { 
+    grid-area: block; 
+    justify-content: center;
+    background-color: rgb(71, 71, 99);
+    border: 1px solid #00000027;
+    // max-width: 15rem;
+    min-height: 10rem;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.block2 { 
+    grid-area: block2; 
+}

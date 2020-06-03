@@ -1,0 +1,36 @@
+<div id="wrapper">
+<div class="form">
+
+    <h3>To do List</h3>
+
+    <input class='to-do-text' type="text" [(ngModel)]='todoText'>
+    <i (click)="addTodo()" class="material-icons md-48">add_circle</i>
+</div>
+
+<div class="list">
+
+    <div *ngFor='let item of todos'>
+        <div id="item">
+            <div class="space">
+            <h4>{{ item }}</h4>
+        </div>
+            
+            <i (click)='remove(item)' class="material-icons">delete</i>
+            <i (click)='done(item)' class="material-icons">check_circle</i>
+        </div>
+        </div>
+
+</div>
+
+<div class="list">
+
+    <h3>finished tasks</h3>
+
+    <div id="red" class="space" *ngFor='let item of completedTasks'>
+        <h4>{{ item }}</h4>
+
+    </div>
+
+</div>
+
+</div>
