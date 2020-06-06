@@ -2,7 +2,7 @@ h3{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: rgb(26, 57, 102);
+    color: #0062cc;
 }
 
 label{
@@ -12,16 +12,30 @@ label{
 }
 
 form{
+    margin-top: 20px;
     padding: 20px;
-    border: 1px solid #5e717e;
     border-radius: 8px;
-    background-color: #1b262c;
+    background-color: #fff;
     display: flex;
     justify-content: center;
-    max-width: 60%;
+    
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 input{
     width: 20rem;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    width: 25rem;
+}
+
+fieldset{
+    display: flex;
+    width: 100%;
+    justify-content: left;
 }

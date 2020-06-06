@@ -11,7 +11,8 @@ import { TempConverterComponent } from './components/temp-converter/temp-convert
 import { AboutComponent } from './components/about/about.component';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-import { UserLoginComponent } from './components/user-login/user-login.component'
+import { UserLoginComponent } from './components/user-login/user-login.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserLoginComponent } from './components/user-login/user-login.component
     AboutComponent,
     UserRegisterComponent,
     UserListComponent,
-    UserLoginComponent
+    UserLoginComponent,
+
   ],
   imports: [
     BrowserModule,

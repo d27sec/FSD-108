@@ -1,1 +1,48 @@
-<p>user-list works!</p>
+<div class="container">
+
+<h3>Current Users</h3>
+
+
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>User name</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let user of allUsers; let i = index" id="row_{{i}}">
+            <td>{{ user.userName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.phoneNumber }}</td>
+            <td>
+                <button (click)="editUser(user)" class="btn btn-sm bt-info"> Edit</button>
+                <button (click)="removeUser(user)" class="btn btn-sm bt-danger"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>
+
+<div class="count">
+    <p *ngIf="allUsers.length ==1">
+        {{ allUsers.length}} user in the service 
+    </p>
+    <p *ngIf="allUsers.length !=1 ">
+        {{ allUsers.length}} users in the service 
+    </p>
+
+
+        
+</div>
+</div>

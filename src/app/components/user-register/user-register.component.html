@@ -1,22 +1,11 @@
-<div>
-
-    <h3>Register New User</h3>
+<div *ngIf='shared.isUserLoggedIn' class="container">
 
 
-    <!-- 
-        username
-        email
-        passwd
-        retype pass
+  
 
-        first
-        last name 
-        address
-        phone number
-     -->
-</div>
 
 <form class="form-horizontal">
+  <h3>Register New User</h3>
     <fieldset>
     
     <!-- Form Name -->
@@ -31,9 +20,19 @@
       </div>
     </div>
     
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="email">email</label>  
+      <div class="col-md-4">
+      <input [(ngModel)]='model.email' name="email" type="text" placeholder="enter your email" class="form-control input-md">
+        
+      </div>
+    </div>
+    
     <!-- Password input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="passwordinput">Password Input</label>
+      <label class="col-md-4 control-label" for="passwordinput">Password</label>
       <div class="col-md-4">
         <input [(ngModel)]='model.password' name="passwordinput" type="password" placeholder="enter your password" class="form-control input-md">
         <span class="help-block">help</span>
@@ -45,10 +44,10 @@
       <label class="col-md-4 control-label" for="repasswordinput"></label>
       <div class="col-md-4">
         <input [(ngModel)]='retypePassword' name="repasswordinput" type="password" placeholder="re-enter your password" class="form-control input-md">
-        
+
       </div>
+      <div class="alert alert-danger" *ngIf="model.password && retypePassword && model.password !=retypePassword">passwords do not match</div>
     </div>
-    
     <!-- Text input-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="firstName">First Name</label>  
@@ -69,21 +68,13 @@
     
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="phone">phone number</label>  
+      <label class="col-md-4 control-label" for="phone">Phone Number</label>  
       <div class="col-md-4">
       <input [(ngModel)]='model.phoneNumber' name="phone" type="text" placeholder="enter your phone number" class="form-control input-md">
         
       </div>
     </div>
     
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="email">email</label>  
-      <div class="col-md-4">
-      <input [(ngModel)]='model.email' name="email" type="text" placeholder="enter your email" class="form-control input-md">
-        
-      </div>
-    </div>
     
     <!-- Text input-->
     <div class="form-group">
@@ -96,12 +87,16 @@
     
     <!-- Button -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="singlebutton">Save User</label>
-      <div class="col-md-4">
-        <button (click)='save()' id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+
+      <div class="form-group">
+        <button (click)='save()' [disabled]="!model.userName || !model.email || !model.firstName || !model.password || model.password != retypePassword" id="singlebutton" name="singlebutton" class="btn btn-primary">Save User</button>
+      
+        <div class="alert alert-success" *ngIf="isAlertVisible">
+          the user is registered 
+        </div>
       </div>
     </div>
     
     </fieldset>
     </form>
-    
+  </div>
