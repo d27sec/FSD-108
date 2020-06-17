@@ -89,7 +89,7 @@
     <div class="form-group">
 
       <div class="form-group">
-        <button (click)='save()' [disabled]="!model.userName || !model.email || !model.firstName || !model.password || model.password != retypePassword" id="singlebutton" name="singlebutton" class="btn btn-primary">Save User</button>
+        <button (click)='save()' [disabled]="!model.userName || !model.email || !model.firstName || !model.password || model.password != retypePassword" id="singlebutton" name="singlebutton" class="btn">Save User</button>
       
         <div class="alert alert-success" *ngIf="isAlertVisible">
           the user is registered 

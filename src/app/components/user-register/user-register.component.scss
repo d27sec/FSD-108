@@ -2,12 +2,12 @@ h3{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    color: #0062cc;
+    color: var(--sec);
 }
 
 label{
     text-align: center;
-    color: #4c4d55;
+    color: hsl(233, 6%, 32%);
     font-weight: 600;
 }
 
@@ -39,3 +39,15 @@ fieldset{
     width: 100%;
     justify-content: left;
 }
+
+.btn{ 
+    background-color: var(--ter);
+    
+
+}
+
+.btn:disabled{
+    background-color: rgba(104, 104, 104, 0.829);
+    color: var(--pri);
+}
+

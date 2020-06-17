@@ -10,7 +10,7 @@
 }
 .login-form-1 h3{
     text-align: center;
-    color: #0062cc;
+    color: var(--pri);
     font-weight: 700;
 }
 
@@ -30,11 +30,11 @@
 .login-form-1 .btnSubmit{
     font-weight: 600;
     color: #fff;
-    background-color: #0062cc;
+    background-color: var(--sec);
 }
 
 .login-form-1 .ForgetPwd{
-    color: #0062cc;
+    color: var(--ter);
     font-weight: 600;
     text-decoration: none;
 }
